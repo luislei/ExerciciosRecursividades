@@ -1,0 +1,15 @@
+C:\_Dev\UC00245\ExerciciosRecursividades\ExerciciosRecursividades\bin\Debug\net10.0\ExerciciosRecursividades.exe
+C:\_Dev\UC00245\ExerciciosRecursividades\ExerciciosRecursividades\bin\Debug\net10.0\ExerciciosRecursividades.deps.json
+C:\_Dev\UC00245\ExerciciosRecursividades\ExerciciosRecursividades\bin\Debug\net10.0\ExerciciosRecursividades.runtimeconfig.json
+C:\_Dev\UC00245\ExerciciosRecursividades\ExerciciosRecursividades\bin\Debug\net10.0\ExerciciosRecursividades.dll
+C:\_Dev\UC00245\ExerciciosRecursividades\ExerciciosRecursividades\bin\Debug\net10.0\ExerciciosRecursividades.pdb
+C:\_Dev\UC00245\ExerciciosRecursividades\ExerciciosRecursividades\obj\Debug\net10.0\ExerciciosRecursividades.GeneratedMSBuildEditorConfig.editorconfig
+C:\_Dev\UC00245\ExerciciosRecursividades\ExerciciosRecursividades\obj\Debug\net10.0\ExerciciosRecursividades.AssemblyInfoInputs.cache
+C:\_Dev\UC00245\ExerciciosRecursividades\ExerciciosRecursividades\obj\Debug\net10.0\ExerciciosRecursividades.AssemblyInfo.cs
+C:\_Dev\UC00245\ExerciciosRecursividades\ExerciciosRecursividades\obj\Debug\net10.0\ExerciciosRecursividades.csproj.CoreCompileInputs.cache
+C:\_Dev\UC00245\ExerciciosRecursividades\ExerciciosRecursividades\obj\Debug\net10.0\ExerciciosRecursividades.sourcelink.json
+C:\_Dev\UC00245\ExerciciosRecursividades\ExerciciosRecursividades\obj\Debug\net10.0\ExerciciosRecursividades.dll
+C:\_Dev\UC00245\ExerciciosRecursividades\ExerciciosRecursividades\obj\Debug\net10.0\refint\ExerciciosRecursividades.dll
+C:\_Dev\UC00245\ExerciciosRecursividades\ExerciciosRecursividades\obj\Debug\net10.0\ExerciciosRecursividades.pdb
+C:\_Dev\UC00245\ExerciciosRecursividades\ExerciciosRecursividades\obj\Debug\net10.0\ExerciciosRecursividades.genruntimeconfig.cache
+C:\_Dev\UC00245\ExerciciosRecursividades\ExerciciosRecursividades\obj\Debug\net10.0\ref\ExerciciosRecursividades.dll
