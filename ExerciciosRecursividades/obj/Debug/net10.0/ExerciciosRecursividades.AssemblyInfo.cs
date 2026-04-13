@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExerciciosRecursividades")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9dc6a155a41bf42040f3ef01be1657a551b1b932")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f53012a45e3c4d6121657bf03f4b71a52a2869e5")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExerciciosRecursividades")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExerciciosRecursividades")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

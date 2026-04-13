@@ -21,8 +21,8 @@ using System.Text.RegularExpressions;
 /// /// ⚠️ CUIDADOS:   /// - Sem caso base = loop infinito (StackOverflow)   
 /// /// - Muitas chamadas recursivas = estouro de pilha   
 /// /// - Recursão é mais intuitiva mas pode ser mais lenta que iteração
-namespace ExerciciosAula02B
-{
+namespace ExerciciosAula02B;
+
   /// <summary>
   /// 🔄 EXERCÍCIOS DE RECURSIVIDADE
   /// ===============================
@@ -32,7 +32,7 @@ namespace ExerciciosAula02B
   /// Exercício 3: Verificador de Palíndromo (Recursivo)
   /// </summary>
   public class AlunoRecursividade
-  {
+    {
     public void Executar()
     {
       Console.WriteLine("\n\n🔄 1. EXERCÍCIOS DE RECURSIVIDADE");
@@ -61,12 +61,14 @@ namespace ExerciciosAula02B
         // ler a entrada e converter para inteiro
         if (int.TryParse(Console.ReadLine(), out int numero))
         {
+            // verifica se o numero é positivo
             if (numero < 0)
             {
                 Console.WriteLine("Erro: O número tem de ser positivo.");
             }
             else
             {
+                // calcula o fatorial com a função recursiva
                 long resultado = Fatorial(numero);
                 Console.WriteLine($"{numero}! = {resultado}");
             }
@@ -81,7 +83,7 @@ namespace ExerciciosAula02B
         static long Fatorial(int n)
         {
             // 4. Caso base: se n = 0 ou n = 1, retornar 1
-            if (n <= 1)
+            if (n == 0 || n == 1)
             {
                 return 1;
             }
@@ -196,57 +198,55 @@ namespace ExerciciosAula02B
       Console.WriteLine("\n📝 Exercício 7: Verificador de Palíndromo (Recursivo)");
 
       // ESCREVA SEU CÓDIGO AQUI
+        // 1. Solicitar ao usuário que digite uma palavra ou frase
+        Console.WriteLine("Digite uma palavra ou frase:");
+        string input = Console.ReadLine();
 
-      Console.Write("Digite uma palavra ou frase: ");
-        string entrada = Console.ReadLine();
+        // 2. Remover espaços e converter para minúsculo
+        string cleanedInput = CleanInput(input);
 
-        if (string.IsNullOrWhiteSpace(entrada))
+        // 3. Verificar se a string é um palíndromo
+        bool isPalindrome = IsPalindrome(cleanedInput);
+
+        // 4. Exibir se a palavra/frase é ou não um palíndromo
+        if (isPalindrome)
         {
-            Console.WriteLine("Erro: Você precisa digitar algo.");
-            return;
+            Console.WriteLine($"A frase/palavra \"{input}\" é um palíndromo.");
         }
-
-        // 2. Limpeza: remove espaços, pontuação e converte para minúsculo
-        string textoLimpo = LimparTexto(entrada);
-
-        // 3 & 8. Verificação e Exibição
-        bool ehPalindromo = Palindromo(textoLimpo);
-
-        Console.WriteLine($"\nTexto processado: {textoLimpo}");
-        if (ehPalindromo)
-            Console.WriteLine("✅ É um palíndromo!");
         else
-            Console.WriteLine("❌ Não é um palíndromo.");
+        {
+            Console.WriteLine($"A frase/palavra \"{input}\" não é um palíndromo.");
+        }
     
 
-        /// Método recursivo para verificar se a string é igual de trás para frente.
+    // Método para limpar a string
+    static string CleanInput(string input)
+    {
+        // Remover caracteres especiais e espaços, e converter para minúsculo
+        return Regex.Replace(input.ToLower(), @"[^a-z0-9]", "");
+    }
 
-        static bool Palindromo(string s)
+    // Método recursivo que verifica se a string é um palíndromo
+    static bool IsPalindrome(string str)
+    {
+        // 5. Caso base: se string tem 0 ou 1 caractere, retornar true
+        if (str.Length <= 1)
         {
-            // 5. Caso base: se string tem 0 ou 1 caractere, é palíndromo
-            if (s.Length <= 1)
-                return true;
-
-            // 6. Caso base: se as extremidades forem diferentes, não é palíndromo
-            if (s[0] != s[s.Length - 1])
-                return false;
-
-            // 7. Caso recursivo: remove o primeiro e o último e testa o que sobrou
-            return Palindromo(s.Substring(1, s.Length - 2));
+            return true;
         }
 
-        /// Remove espaços, caracteres especiais e acentos para uma comparação justa.
-        static string LimparTexto(string texto)
+        // 6. Caso base: se primeiro e último caracteres são diferentes, retornar false
+        if (str[0] != str[str.Length - 1])
         {
-            // Converte para minúsculo e remove o que não for letra ou número
-            string semEspeciais = Regex.Replace(texto.ToLower(), @"[^a-z0-9]", "");
-            
-            // Opcional: Remover acentos de forma simples
-            return new string(semEspeciais
-                .Normalize(System.Text.NormalizationForm.FormD)
-                .Where(c => System.Globalization.CharUnicodeInfo.GetUnicodeCategory(c) != System.Globalization.UnicodeCategory.NonSpacingMark)
-                .ToArray());
+            return false;
         }
+
+        // 7. Caso recursivo: verificar substring sem primeiro e último caracteres
+        return IsPalindrome(str.Substring(1, str.Length - 2));
+    }
+
+
+       
       // Saída esperada:
       /**📝 Exercício 4: Verificador de Palíndromo (Recursivo)
       Digite uma palavra ou frase: radar
@@ -258,9 +258,6 @@ namespace ExerciciosAula02B
       Digite uma palavra ou frase: Socorram me subi no onibus em marrocos
       "socorram me subi no onibus em marrocos" É um palíndromo!
       */
-      Console.WriteLine();
-
 
     }
-  }
-}
+    }
